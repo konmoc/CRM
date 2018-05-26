@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <td>Id:</td>
+        <td>Name:</td>
+        <td>Active:</td>
+        <td>Actions:</td>
+        <tr th:each="priority: ${priorities}">
+            <td th:text="${priority.id}"></td>
+            <td th:text="${priority.name}"></td>
+            <td th:text="${priority.active}"></td>
+            <td>
+                <a th:href="|http://localhost:8080/priority/delete/${priority.id}|">DELETE</a>
+            </td>
+        </tr>
+
+
+    </table>
+<a href="http://localhost:8080/">Home Page</a>
+
+</body>
+</html>

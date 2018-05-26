@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Priority Add Form</title>
+</head>
+<body>
+
+    <form th:action="@{/priority/add/form}" th:object="${priority}" method="post">
+        <p>Priority Name: <input type="text" th:field="*{name}" /></p>
+        <p>Active:  <input type="checkbox" th:field="*{active}" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+
+</body>
+</html>

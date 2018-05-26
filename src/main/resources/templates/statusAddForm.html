@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Status Add Form</title>
+</head>
+<body>
+
+<form th:action="@{/status/add/form}" th:object="${status}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Sorting: <input type="number" th:field="*{sorting}" /></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>

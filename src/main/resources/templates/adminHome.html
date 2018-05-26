@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align: center"> Admin Home page</h1>
+<h2>Menu:</h2>
+<p>
+    <a th:href="|http://localhost:8080/user/show|">ALL USERS</a><br>
+    <a style="font-size: 15px;text-decoration: none"  th:href="|http://localhost:8080/user/add/form|">-ADD USER</a><br>
+    <a th:href="|http://localhost:8080/priority/show|">ALL PRIORITIES</a><br>
+    <a style="font-size: 15px;text-decoration: none"  th:href="|http://localhost:8080/priority/add/form|">-ADD PRIORITY</a><br>
+</p>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Wyloguj"/>
+</form>
+</body>
+</html>

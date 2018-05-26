@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/project/add/form}" th:object="${project}" method="post">
+
+    <select multiple th:field="*{tasks}">
+        <option th:each="task : ${tasks}"
+                th:value="${task.id}"
+                th:text="${task.topic}">User</option>
+    </select>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
